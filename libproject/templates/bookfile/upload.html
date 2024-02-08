@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}"/>
+
+    <title>WHS Library</title>
+
+
+</head>
+
+<body>
+
+    <h1>Upload books</h1>
+
+    <header>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <form action="upload_" method="POST" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <div>
+            <p>title</p>
+            <input type="text" name="title" id="">
+
+            <p>author</p>
+            <input type="text" name="author" id="">
+
+            <p>id_book</p>
+            <input type="text" name="id_book" id="">
+
+            <p>year</p>
+            <input type="text" name="year" id="">
+
+            <p>description</p>
+            <input type="text" name="description" id="">
+
+            <p>age_rating</p>
+            <input type="text" name="age_rating" id="">
+
+            <p>condition</p>
+            <input type="text" name="condition" id="">
+
+            <p>pages</p>
+            <input type="text" name="pages" id="">
+
+            <p>image</p>
+            <input type="file" name="img">
+            <br>
+            <button type="submit" >Upload</button>
+        </div>
+    </form>
+
+
+
+
+    <br>
+    <h1>Library</h1>
+
+    <table width="100%">
+        <tr>
+            <th>2021</th>
+            <th>2020</th>
+            <th>2019 November</th>
+            <th>2019 June</th>
+            <th>2018 November</th>
+            <th>2018 June</th>
+        </tr>
+    </table>
+	
+	<footer>
+
+	</footer>
+
+    <style>
+
+        section {
+        display: inline-block;
+        vertical-align: top;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+            vertical-align: top;
+            table-layout: fixed;
+        }
+
+    </style>
+	
+</body>
+
+</html>
